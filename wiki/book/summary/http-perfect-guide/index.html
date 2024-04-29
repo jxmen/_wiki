@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>HTTP 완벽 가이드 요약 - 박주영의 위키</title>
+
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://jxmen.dev/wiki/book/summary/http-perfect-guide/">
+    <link rel="alternate" type="application/rss+xml" title="박주영의 위키" href="https://jxmen.dev/feed.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HTTP 완벽 가이드 요약">
+    <meta property="og:description" content="">
+    <!---
+    <meta property="og:image" content="https://jxmen.dev/resource/johngrib.png">
+    -->
+    <meta property="og:url" content="https://jxmen.dev/wiki/book/summary/http-perfect-guide/">
+
+    <!--- 
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@" />
+        <meta name="twitter:url" content="https://jxmen.dev/wiki/book/summary/http-perfect-guide/" />
+        <meta name="twitter:title" content="HTTP 완벽 가이드 요약" />
+        <meta name="twitter:description" content="" />
+    --->
+
+    <!---
+    <link rel="apple-touch-icon" sizes="57x57"        href="/resource/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"        href="/resource/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"        href="/resource/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"        href="/resource/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"      href="/resource/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"      href="/resource/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"      href="/resource/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"      href="/resource/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/resource/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/resource/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/resource/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/resource/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/resource/icon/favicon-16x16.png">
+    <link rel="manifest" href="/resource/icon/manifest.json">
+    --->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
+</head>
+<body>
+<header class="header">
+    <div>
+        <a class="site-title" href="/">박주영의 위키</a>
+    </div>
+    <div>
+        <a class="site-title-right" href="/about/">me</a>
+    </div>
+    <div>
+        <a id="random-button" class="site-title-right">random</a>
+    </div>
+    <div>
+        <!---<a class="site-title-right" href="/wiki/root-index/">index</a> --->
+        <a class="site-title-right" href="/wiki/index/">index</a>
+    </div>
+</header>
+<script async src="/js/shortcut.js"></script>
+
+    
+        <div class="page-content">
+            <div class="search">
+    <form role="search" method="get" action="/search/">
+         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+         <input type="submit" class="searchButton" value="Search">
+    </form>
+</div>
+            <div class="post">
+                
+<input type="hidden" id="thisName" value="book/summary/http-perfect-guide">
+<div class="post">
+    <header class="post-header">
+        <h1 class="page-title">
+            <a href="/wiki/book/summary/http-perfect-guide/"> HTTP 완벽 가이드 요약 </a>
+        </h1>
+    
+        <div class="history-button">
+            <p><a href="https://github.com/jxmen/jxmen.github.io/blame/main/_wiki/book/summary/http-perfect-guide.md" target="_blank">created: 2024.03.29</a></p>
+            <p><a href="https://github.com/jxmen/jxmen.github.io/blame/main/_wiki/book/summary/http-perfect-guide.md" target="_blank">updated: 2024.04.26</a></p>
+            <p>
+                <a href="https://github.com/jxmen/jxmen.github.io/edit/main/_wiki/book/summary/http-perfect-guide.md">편집하기</a>
+                /
+                <a href="https://github.com/jxmen/jxmen.github.io/issues/new?title=HTTP+%EC%99%84%EB%B2%BD+%EA%B0%80%EC%9D%B4%EB%93%9C+%EC%9A%94%EC%95%BD&amp;body=%EC%9D%98%EA%B2%AC%EC%9D%84%20%EB%82%A8%EA%B2%A8%EC%A3%BC%EC%84%B8%EC%9A%94">의견 남기기</a>
+            </p>
+        </div>
+
+        <div id="parent-list"></div>
+
+
+
+    <div class="post-tag">
+    http
+</div>
+
+
+
+
+    </header>
+    <article class="post-content">
+        <ul id="markdown-toc">
+  <li><a href="#%EC%98%AE%EA%B8%B4%EC%9D%B4%EC%9D%98-%EA%B8%80" id="markdown-toc-옮긴이의-글">옮긴이의 글</a></li>
+  <li><a href="#%EC%84%9C%EB%AC%B8" id="markdown-toc-서문">서문</a></li>
+  <li>
+<a href="#1%EB%B6%80---http-%EC%9B%B9%EC%9D%98-%EA%B8%B0%EC%B4%88" id="markdown-toc-1부---http-웹의-기초">1부 - HTTP: 웹의 기초</a>    <ul>
+      <li>
+<a href="#1%EC%9E%A5---http-%EA%B0%9C%EA%B4%80" id="markdown-toc-1장---http-개관">1장 - HTTP 개관</a>        <ul>
+          <li><a href="#13-%EB%A6%AC%EC%86%8C%EC%8A%A4" id="markdown-toc-13-리소스">1.3 리소스</a></li>
+          <li><a href="#14-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98" id="markdown-toc-14-트랜잭션">1.4 트랜잭션</a></li>
+          <li><a href="#15-%EB%A9%94%EC%8B%9C%EC%A7%80" id="markdown-toc-15-메시지">1.5 메시지</a></li>
+          <li><a href="#16-tcp-%EC%BB%A4%EB%84%A5%EC%85%98" id="markdown-toc-16-tcp-커넥션">1.6 TCP 커넥션</a></li>
+          <li><a href="#17-%EC%97%AC%EB%9F%AC-%EC%A2%85%EB%A5%98%EC%9D%98-http-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C" id="markdown-toc-17-여러-종류의-http-프로토콜">1.7 여러 종류의 HTTP 프로토콜</a></li>
+          <li><a href="#18-%EC%9B%B9%EC%9D%98-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C" id="markdown-toc-18-웹의-구성-요소">1.8 웹의 구성 요소</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#2%EC%9E%A5---url%EA%B3%BC-%EB%A6%AC%EC%86%8C%EC%8A%A4" id="markdown-toc-2장---url과-리소스">2장 - URL과 리소스</a>        <ul>
+          <li><a href="#21-%EC%9D%B8%ED%84%B0%EB%84%B7%EC%9D%98-%EB%A6%AC%EC%86%8C%EC%8A%A4-%ED%83%90%EC%83%89%ED%95%98%EA%B8%B0" id="markdown-toc-21-인터넷의-리소스-탐색하기">2.1 인터넷의 리소스 탐색하기</a></li>
+          <li><a href="#22-url-%EB%AC%B8%EB%B2%95" id="markdown-toc-22-url-문법">2.2 URL 문법</a></li>
+          <li><a href="#23-%EB%8B%A8%EC%B6%95-url" id="markdown-toc-23-단축-url">2.3 단축 URL</a></li>
+          <li>
+<a href="#24-%EC%95%88%EC%A0%84%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EB%AC%B8%EC%9E%90" id="markdown-toc-24-안전하지-않은-문자">2.4 안전하지 않은 문자</a>            <ul>
+              <li><a href="#241-url-%EB%AC%B8%EC%9E%90-%EC%A7%91%ED%95%A9" id="markdown-toc-241-url-문자-집합">2.4.1 URL 문자 집합</a></li>
+              <li><a href="#242-%EC%9D%B8%EC%BD%94%EB%94%A9-%EC%B2%B4%EA%B3%84" id="markdown-toc-242-인코딩-체계">2.4.2 인코딩 체계</a></li>
+              <li><a href="#243-%EB%AC%B8%EC%9E%90-%EC%A0%9C%ED%95%9C" id="markdown-toc-243-문자-제한">2.4.3 문자 제한</a></li>
+              <li><a href="#244-%EC%A2%80-%EB%8D%94-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0" id="markdown-toc-244-좀-더-알아보기">2.4.4 좀 더 알아보기</a></li>
+            </ul>
+          </li>
+          <li><a href="#25-%EC%8A%A4%ED%82%B4%EC%9D%98-%EB%B0%94%EB%8B%A4" id="markdown-toc-25-스킴의-바다">2.5 스킴의 바다</a></li>
+          <li><a href="#26-%EB%AF%B8%EB%9E%98" id="markdown-toc-26-미래">2.6 미래</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#3-http-%EB%A9%94%EC%8B%9C%EC%A7%80" id="markdown-toc-3-http-메시지">3. HTTP 메시지</a>        <ul>
+          <li><a href="#31-%EB%A9%94%EC%8B%9C%EC%A7%80%EC%9D%98-%ED%9D%90%EB%A6%84" id="markdown-toc-31-메시지의-흐름">3.1 메시지의 흐름</a></li>
+          <li><a href="#32-%EB%A9%94%EC%8B%9C%EC%A7%80%EC%9D%98-%EA%B0%81-%EB%B6%80%EB%B6%84" id="markdown-toc-32-메시지의-각-부분">3.2 메시지의 각 부분</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#4-%EC%BB%A4%EB%84%A5%EC%85%98-%EA%B4%80%EB%A6%AC" id="markdown-toc-4-커넥션-관리">4. 커넥션 관리</a>        <ul>
+          <li><a href="#41-tcp-%EC%BB%A4%EB%84%A5%EC%85%98" id="markdown-toc-41-tcp-커넥션">4.1 TCP 커넥션</a></li>
+          <li><a href="#42-tcp%EC%9D%98-%EC%84%B1%EB%8A%A5%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%A0%EB%A0%A4" id="markdown-toc-42-tcp의-성능에-대한-고려">4.2 TCP의 성능에 대한 고려</a></li>
+          <li><a href="#43-http-%EC%BB%A4%EB%84%A5%EC%85%98-%EA%B4%80%EB%A6%AC" id="markdown-toc-43-http-커넥션-관리">4.3 HTTP 커넥션 관리</a></li>
+          <li><a href="#44-%EB%B3%91%EB%A0%AC-%EC%BB%A4%EB%84%A5%EC%85%98" id="markdown-toc-44-병렬-커넥션">4.4 병렬 커넥션</a></li>
+          <li><a href="#45-%EC%A7%80%EC%86%8D-%EC%BB%A4%EB%84%A5%EC%85%98" id="markdown-toc-45-지속-커넥션">4.5 지속 커넥션</a></li>
+          <li><a href="#46-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8-%EC%BB%A4%EB%84%A5%EC%85%98" id="markdown-toc-46-파이프라인-커넥션">4.6 파이프라인 커넥션</a></li>
+          <li><a href="#47-%EC%BB%A4%EB%84%A5%EC%85%98-%EB%81%8A%EA%B8%B0%EC%97%90-%EB%8C%80%ED%95%9C-%EB%AF%B8%EC%8A%A4%ED%84%B0%EB%A6%AC" id="markdown-toc-47-커넥션-끊기에-대한-미스터리">4.7 커넥션 끊기에 대한 미스터리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="#2%EB%B6%80---http-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" id="markdown-toc-2부---http-아키텍처">2부 - HTTP 아키텍처</a>    <ul>
+      <li><a href="#5-%EC%9B%B9-%EC%84%9C%EB%B2%84" id="markdown-toc-5-웹-서버">5. 웹 서버</a></li>
+      <li><a href="#6-%ED%94%84%EB%9D%BD%EC%8B%9C" id="markdown-toc-6-프락시">6. 프락시</a></li>
+      <li><a href="#7-%EC%BA%90%EC%8B%9C" id="markdown-toc-7-캐시">7. 캐시</a></li>
+    </ul>
+  </li>
+  <li><a href="#%EA%B0%81%EC%A3%BC" id="markdown-toc-각주">각주</a></li>
+</ul>
+
+<h2 id="옮긴이의-글">옮긴이의 글</h2>
+
+<p>HTTP/1.1 명세는 1999년 RFC 2616이었으나, 2014년 6월에 RFC 7230~7235로 대체되었다.</p>
+
+<h2 id="서문">서문</h2>
+
+<blockquote>
+  <p>책 전반에 걸쳐서, "HTTP를 어떻게 사용하는가"에 대한 내용뿐만 아니라 "HTTP를 사용하는 이유"에 대해서도 자세히 설명한다.</p>
+</blockquote>
+
+<h2 id="1부---http-웹의-기초">1부 - HTTP: 웹의 기초</h2>
+
+<h3 id="1장---http-개관">1장 - HTTP 개관</h3>
+
+<p>내가 궁금했던 내용</p>
+<ul>
+  <li>HTTP가 무엇인가?</li>
+  <li>HTTP가 왜 탄생했는가?</li>
+  <li>HTTP가 웹 트래픽을 어떻게 전송하는가?</li>
+  <li>웹 서버는 어떤 역할을 하는가?</li>
+  <li>MIME 타입이란 무엇인가?</li>
+</ul>
+
+<p>책에서 다룰 내용 - 3p</p>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>얼마나 많은 클라이언트와 서버가 통신하는지</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>리소스(웹 콘텐츠)가 어디서 오는지</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>웹 트랜잭션이 어떻게 동작하는지</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>HTTP 통신을 위해 사용하는 메시지의 형식</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>HTTP 기저의 TCP 네트워크 전송</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>여러 종류의 HTTP 프로토콜</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>인터넷 곳곳에 설치된 다양한 HTTP 구성요소</li>
+</ul>
+
+<h4 id="13-리소스">1.3 리소스</h4>
+
+<p>웹 서버는 웹 리소스(웹 콘텐츠)를 관리하고 제공한다. 이는 정적 파일, 텍스트, 동영상 등 외에 모든 종류의 파일을 포함한다.</p>
+
+<p>미디어 타입</p>
+<ul>
+  <li>인터넷에서는 여러 가지 타입을 다루는데, 이 타입에 대한 정보를 <strong>MIME 타입</strong>이라고 한다.
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>Content-type: image/jpeg
+</code></pre></div>    </div>
+    <ul>
+      <li>주 타입/ 부 타입으로 이루어진 라벨</li>
+    </ul>
+  </li>
+  <li>URI
+    <ul>
+      <li>리소스의 고유 식별자이다. URL과 URN으로 구분된다.</li>
+      <li>URL
+        <ul>
+          <li>경로를 통해 리소스를 식별하는 것</li>
+        </ul>
+      </li>
+      <li>URN
+        <ul>
+          <li>리소스 고유의 이름을 통해 리소스를 식별하는 것이다. URL과 다르게 리소스의 경로가 수정되어도 동일한 값을 가진다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="14-트랜잭션">1.4 트랜잭션</h4>
+
+<p>1.4.1 메서드</p>
+<ul>
+  <li>서버에게 어떤 동작이 취해져야 하는지를 말해준다.</li>
+</ul>
+
+<p>1.4.2 상태 코드</p>
+<ul>
+  <li>응답과 함께 반환되며, 요청 성공, 실패, 추가 조치가 필요한지 알려주는 세 자리 숫자이다.</li>
+</ul>
+
+<p>1.4.3 웹페이지는 여러 객체로 이루어질 수 있다</p>
+<ul>
+  <li>웹브라우저는 풍부한 웹페이지를 가져올 때 대량의 HTTP 트랜잭션을 수행한다.</li>
+</ul>
+
+<h4 id="15-메시지">1.5 메시지</h4>
+
+<p>요청은 다음과 같은 형식의 메시지가 주어진다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /index.html
+---
+Accept: text/*
+
+</code></pre></div></div>
+<ul>
+  <li>요청 메서드</li>
+  <li>요청 헤더</li>
+</ul>
+
+<p>응답은 다음과 같은 형식으로 응답한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+---
+Content-type: text/html
+
+---
+&lt;html&gt;
+...
+&lt;/html&gt;
+
+</code></pre></div></div>
+<ul>
+  <li>HTTP 상태 코드 / 상태 코드에 대한 메시지</li>
+  <li>응답 헤더</li>
+  <li>응답 본문</li>
+</ul>
+
+<h4 id="16-tcp-커넥션">1.6 TCP 커넥션</h4>
+
+<p>telnet</p>
+<ul>
+  <li>텔넷 유틸리티가 HTTP 요청을 수행하기 전 TCP 연결을 해주는 역할을 한다.</li>
+</ul>
+
+<h4 id="17-여러-종류의-http-프로토콜">1.7 여러 종류의 HTTP 프로토콜</h4>
+
+<ul>
+  <li>HTTP/0.9: 프로토타입용</li>
+  <li>HTTP/1.0: keep-alive 커넥션, 가상 호스팅 지원, 프락시 연결 지원</li>
+  <li>HTTP/1.1: 1.0 결함 교정, 성능 최적화, 잘못된 기능 제거</li>
+  <li>HTTP/2.0: 1.1 성능 개선을 위해 SPDY 프로토콜 기반으로 설계</li>
+</ul>
+
+<h4 id="18-웹의-구성-요소">1.8 웹의 구성 요소</h4>
+
+<ul>
+  <li>프록시
+    <ul>
+      <li>주로 보안 향상을 위해 중재자 역할을 한다.</li>
+    </ul>
+  </li>
+  <li>캐시
+    <ul>
+      <li>웹 캐시, 프록시 캐시 등이 성능 향상을 위해 사용한다.</li>
+    </ul>
+  </li>
+  <li>게이트웨이
+    <ul>
+      <li>다른 서버들의 중개자로 동작하며, 주로 프로토콜 변환 시에 사용한다. (e.g. http -&gt; ftp)</li>
+    </ul>
+  </li>
+  <li>터널
+    <ul>
+      <li>두 커넥션 사이 데이터를 열어보지 않고 그대로 전달해준다.</li>
+      <li>프록시는 클라이언트의 패킷을 분석 후 다시 재조립하여 서버에 보내주지만, 터널은 패킷을 조작하지 않는다.</li>
+    </ul>
+  </li>
+  <li>에이전트
+    <ul>
+      <li>자동화된 HTTP 요청을 만드는 클라이언트</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2장---url과-리소스">2장 - URL과 리소스</h3>
+
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>URL 문법, 여러 URL 컴포넌트가 어떤 의미를 가지며 수행하는지.</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>여러 웹 클라이언트가 지원하는 상대 URL과 확장 URL같은 단축 URL에 대해서.</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>URL의 인코딩과 문자 규칙</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>여러 인터넷 정보 시스템에 적용되는 공통 URL 스킴</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>기존 이름은 유지하면서 객체들을 다른 장소로 옮기는 것을 가능하게 해주는 URN을 포함한 URL의 미래</li>
+</ul>
+
+<h4 id="21-인터넷의-리소스-탐색하기">2.1 인터넷의 리소스 탐색하기</h4>
+
+<p>URL을 사용하면 리소스를 일관된 방식으로 지칭할 수 있다. 대부분의 URL은 <code class="language-plaintext highlighter-rouge">스킴://서버위치/경로</code>로 구성된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://www.joes-hardware.com/seasonal/index-fail.html
+</code></pre></div></div>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">http</code>: 스킴
+    <ul>
+      <li>웹 클라이언트가 리소스에 어떻게 접근하는지 (<strong>어떤 프로토콜을 사용할 것인지</strong>)</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">www.joes-hardware.com</code>: 서버의 위치
+    <ul>
+      <li>리소스가 어디에 호스팅되어 있는지</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">/seasonal/index-fail.html</code>: 리소스의 경로
+    <ul>
+      <li>서버에 존재하는 로컬 리소스 중 요청받은 리소스가 무엇인지</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="22-url-문법">2.2 URL 문법</h4>
+
+<p>URL 문법을 더 자세하게 나누면 다음과 같은 형태가 된다. <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;스킴&gt;://&lt;사용자 이름&gt;:&lt;비밀번호&gt;@&lt;호스트&gt;:&lt;포트&gt;/&lt;경로&gt;;&lt;파라미터&gt;?&lt;질의&gt;#&lt;프래그먼트&gt;</code></p>
+
+<p>(자세한 내용은 중략…)</p>
+
+<h4 id="23-단축-url">2.3 단축 URL</h4>
+
+<p>상대 URL(<code class="language-plaintext highlighter-rouge">./hammers.html</code>)이 주어지면 기존의 절대 URL(<code class="language-plaintext highlighter-rouge">http://example.com</code>)의 정보를 상속받아 절대 URL(<code class="language-plaintext highlighter-rouge">https://example.com/hammers.html</code>)로 다시 변환한다.</p>
+
+<h4 id="24-안전하지-않은-문자">2.4 안전하지 않은 문자</h4>
+
+<h5 id="241-url-문자-집합">2.4.1 URL 문자 집합</h5>
+
+<p>이스케이프 문자열은 US-ASCII에서 사용이 금지된다. 특정 문자나 데이터를 인코딩할 수 있게 한다.</p>
+
+<h5 id="242-인코딩-체계">2.4.2 인코딩 체계</h5>
+
+<p>안전하지 않은 문자 집합을 사용하는 경우 <code class="language-plaintext highlighter-rouge">%</code>기호로 시작해, ASCII 코드로 표현되는 두 개의 16진수 숫자로 이루어진 <code class="language-plaintext highlighter-rouge">이스케이프</code>문자로 바꾼다.</p>
+
+<h5 id="243-문자-제한">2.4.3 문자 제한</h5>
+
+<p>URL 내에 특별한 의미로 예약되어 있는 경우 인코딩해서 사용해야 한다. (<code class="language-plaintext highlighter-rouge">%</code>, <code class="language-plaintext highlighter-rouge">/</code> 외 등등)</p>
+
+<h5 id="244-좀-더-알아보기">2.4.4 좀 더 알아보기</h5>
+
+<p>안전하지 않거나 제한된 문자는 인코딩하거나 변환하는 것이 좋다.</p>
+
+<h4 id="25-스킴의-바다">2.5 스킴의 바다</h4>
+
+<p>유명한 스킴으로는 <code class="language-plaintext highlighter-rouge">http</code>, <code class="language-plaintext highlighter-rouge">https</code>, <code class="language-plaintext highlighter-rouge">mailto</code>, <code class="language-plaintext highlighter-rouge">ftp</code>, <code class="language-plaintext highlighter-rouge">rtsp, rtspu</code>, <code class="language-plaintext highlighter-rouge">file</code>, <code class="language-plaintext highlighter-rouge">news</code>, <code class="language-plaintext highlighter-rouge">telnet</code> 등이 있다.</p>
+
+<h4 id="26-미래">2.6 미래</h4>
+
+<p>URL은 강력한 도구이지만 수조이지 실제 이름은 아니다. URN의 경우 URL과 다르게 경로가 변경되어도 같은 리소스를 찾을 수 있다.</p>
+
+<h3 id="3-http-메시지">3. HTTP 메시지</h3>
+
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>메시지가 어떻게 흘러가는가</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>HTTP 메시지의 세 부분(시작줄, 헤더, 개체 본문)</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>요청과 응답 메시지의 차이</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>요청 메시지가 지원하는 여러 기능(메서드)들</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>응답 메시지가 반환하는 여러 상태 코드들</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>여러 HTTP 헤더들은 무슨 일을 하는가</li>
+</ul>
+
+<h4 id="31-메시지의-흐름">3.1 메시지의 흐름</h4>
+
+<p>3.1.1 메시지는 원 서버 방향을 인바운드로 하여 송신된다</p>
+
+<p>3.1.2 다운스트림으로 흐르는 메시지</p>
+
+<ul>
+  <li>모든 메시지는 요청/응답에 관계없이 다운스트림으로 흐른다</li>
+</ul>
+
+<h4 id="32-메시지의-각-부분">3.2 메시지의 각 부분</h4>
+
+<p>메시지는 <code class="language-plaintext highlighter-rouge">시작줄</code>, <code class="language-plaintext highlighter-rouge">헤더 블록</code>, <code class="language-plaintext highlighter-rouge">본문</code> 세 부분으로 이루어진다. 각 줄은 캐리지 리턴(ASCII 13)과 개행 문자(ASCII 10)로 구성된 두 글자의 줄바꿈 문자열으로 끝난다. <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></p>
+
+<h3 id="4-커넥션-관리">4. 커넥션 관리</h3>
+
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>HTTP는 어떻게 TCP 커넥션을 사용하는가</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>TCP 커넥션의 지연, 병목, 막힘</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>병렬 커넥션, keep-alive 커넥션, 커넥션 파이프라인을 활용한 HTTP의 최적화</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>커넥션 관리를 위해 따라야 할 규칙들</li>
+</ul>
+
+<h4 id="41-tcp-커넥션">4.1 TCP 커넥션</h4>
+
+<p>HTTP 요청을 하기 전 TCP 커넥션을 맺고, 요청과 응답을 주고받은 뒤 TCP 연결이 종료된다.</p>
+
+<ul>
+  <li>4.1.2 TCP 스트림은 세그먼트로 나뉘어 IP 패킷을 전송된다
+    <ul>
+      <li>세그먼트라는 단위로 데이터 스트림을 잘게 나누고, IP 패킷라고 불리는 봉투에 담아서 인터넷을 통해 데이터를 전달한다.</li>
+      <li>IP 패킷들을 각각 <code class="language-plaintext highlighter-rouge">IP 패킷 헤더</code>, <code class="language-plaintext highlighter-rouge">TCP 세그먼트 헤더</code>, <code class="language-plaintext highlighter-rouge">TCP 데이터 조각</code>을 포함한다.</li>
+    </ul>
+  </li>
+  <li>4.1.3 TCP 커넥션 유지하기
+    <ul>
+      <li>TCP는 포트 번호를 통해서 여러 개의 커넥션을 유지한다.</li>
+      <li>TCP 커넥션은 <code class="language-plaintext highlighter-rouge">&lt;발신지 IP 주소, 발신지 포트, 수신지 IP 주소, 수신지 포트&gt;</code> 네 가지 값으로 식별한다.</li>
+    </ul>
+  </li>
+  <li>4.1.4 TCP 소켓 프로그래밍
+    <ul>
+      <li>운영체제는 TCP 커넥션의 생성과 관련된 여러 기능과 인터페이스 제공</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="42-tcp의-성능에-대한-고려">4.2 TCP의 성능에 대한 고려</h4>
+
+<p>HTTP는 TCP 바로 위에 있는 계층이기에 TCP 성능에 영향을 받는다.</p>
+
+<p>4.2.2 성능 관련 중요 요소</p>
+
+<ul>
+  <li>TCP 커넥션 핸드셰이크 설정</li>
+  <li>인터넷 혼잡을 제어하기 위한 TCP의 느린 시작 (slow-start)</li>
+  <li>데이터를 한데 모아 한번에 전송하기 위한 네이글 알고리즘</li>
+  <li>TCP의 편승(piggyback) 확인응답(acknowledgment)을 위한 확인응답 지연 알고리즘</li>
+  <li>TIME_WAIT 지연과 포트 고갈</li>
+</ul>
+
+<p>4.2.3 TCP 커넥션 핸드셰이크 지연</p>
+
+<ul>
+  <li>
+<strong>HTTP 트랜잭션이 아주 큰 데이터를 주고받지 않는 평범한 경우에는, SYN/SYN+ACK 핸드셰이크가 눈에 띄는 지연을 발생시킨다.</strong>
+    <ul>
+      <li>TCP의 ACK 패킷은 HTTP 요청 메시지 전체를 전달할 수 있을 만큼 큰 경우가 많고, 많은 HTTP 서버 응답 메시지는 하나의 IP 패킷에도 담길 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>4.2.4 확인응답 지연</p>
+
+<ul>
+  <li>각 TCP 세그먼트는 순번과 데이터 무결성 체크섬을 가진다.</li>
+  <li>확인응답은 그 크기가 작기 때문에, TCP는 같은 방향으로 송출되는 데이터 패킷에 확인응답을 편승(piggyback) 시킨다. 많은 TCP 스택은 <code class="language-plaintext highlighter-rouge">확인응답 지연</code> 알고리즘을 구현한다.</li>
+</ul>
+
+<p>4.2.5 TCP 느린 시작 (slow start)</p>
+
+<ul>
+  <li>TCP 커넥션은 시간이 지나면서 자체적으로 '튜닝'되어서, 처음에는 커넥션의 최대 속도를 제한하고 데이터가 성공적으로 전송됨에 따라서 속도 제한을 높여간다.</li>
+  <li>TCP의 느린 시작은 TCP가 한 번에 전송할 수 있는 패킷의 수를 제한한다.</li>
+</ul>
+
+<p>4.2.6 네이글(Nagle) 알고리즘과 TCP_NODELAY</p>
+
+<ul>
+  <li>패킷을 전송하기 전에 많은 양의 TCP 데이터를 한 개의 덩어리로 합치는 과정이다. 네이글 알고리즘은 세그먼트가 최대 크기가 되지 않으면 전송하지 않는다.</li>
+  <li>HTTP 성능 관련 여러 문제를 일으킨다고 한다. <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> HTTP 어플리케이션에서 <code class="language-plaintext highlighter-rouge">TCP_NODELAY</code> 파라미터 값을 설정하여 비활성화하기도 한다.</li>
+</ul>
+
+<p>4.2.7 TIME_WAIT의 누적과 포트 고갈</p>
+
+<ul>
+  <li>TCP 커넥션을 맺으면 커넥션의 IP 주소와 포트 번호를 메모리의 작은 제어영역(control block)에 저장한다.</li>
+  <li>같은 IP 주소와 포트가 커넥션이 2분 이내에 생기는 것을 방지해준다.</li>
+</ul>
+
+<h4 id="43-http-커넥션-관리">4.3 HTTP 커넥션 관리</h4>
+
+<p>커넥션을 생성하고 최적화하는 HTTP 기술에 대해 알아본다.</p>
+
+<p>4.3.1 흔히 잘못 이해하는 Connection 헤더</p>
+
+<ul>
+  <li>Connection 헤더는 옵션과 토큰들을 쉼표로 구분해 나열한다.
+    <ul>
+      <li>close 값은 커넥션이 작업이 완료되면 종료되어야 함을 의미한다.</li>
+      <li>커넥션에 기술된 모든 헤더 필드는 메시지를 다른 곳으로 전달하는 시점에 삭제되어야 한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>4.3.2 순차적인 트랜잭션 처리에 의한 지연</p>
+
+<ul>
+  <li>페이지 노출을 위해 여러 개의 커넥션이 필요하다면 그만큼 커넥션 지연과 느린 시작 지연이 발생한다. 이를 위해 HTTP 커넥션의 성능을 향상시키는 여러 기술이 존재한다. <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>
+</li>
+</ul>
+
+<h4 id="44-병렬-커넥션">4.4 병렬 커넥션</h4>
+
+<p>여러 개의 HTTP 커넥션을 병렬로 처리하는 방식으로 응답속도를 개선한다.</p>
+
+<ul>
+  <li>네트워크 대역폭이 좁은 경우 오히려 더 느릴 수도 있다.</li>
+  <li>너무 많은 커넥션은 서버에도 부담이 갈 수 있고, 이로 인해 브라우저는 대부분 4개의 병렬 커넥션을 허용한다.</li>
+</ul>
+
+<h4 id="45-지속-커넥션">4.5 지속 커넥션</h4>
+
+<p>4.5.3 Keep-Alive 동작</p>
+
+<ul>
+  <li>HTTP 1.0 keep-alive 커넥션은 요청에 <code class="language-plaintext highlighter-rouge">Connection: Keep-Alive</code>를 포함하고, 서버가 지속 커넥션을 지원할 경우 응답에도 해당 헤더를 응답한다.</li>
+</ul>
+
+<p>4.5.4 Keep-Alive 옵션</p>
+
+<ul>
+  <li>Keep-Alive 헤더에 옵션을 key-value 형태로 쉼표로 구분해 지정한다. 커넥션 유지 시간인 <code class="language-plaintext highlighter-rouge">timeout</code>과 최대 트랜잭션 처리 개수인 <code class="language-plaintext highlighter-rouge">max</code> 외 임의 속성을 지원한다.</li>
+</ul>
+
+<p>4.5.8 HTTP/1.1의 지속 커넥션</p>
+
+<ul>
+  <li>HTTP/1.1에서는 별도 설정을 하지 않는 한, 모든 커넥션을 지속 커넥션으로 취급한다. 커넥션을 종료하려면 <code class="language-plaintext highlighter-rouge">Connection: close</code> 헤더를 명시한다.</li>
+</ul>
+
+<h4 id="46-파이프라인-커넥션">4.6 파이프라인 커넥션</h4>
+
+<p>HTTP/1.1은 지속 커넥션을 통해서 요청을 파이프라이닝할 수 있고, 이는 keep-alive 성능을 더 높여준다.</p>
+
+<h4 id="47-커넥션-끊기에-대한-미스터리">4.7 커넥션 끊기에 대한 미스터리</h4>
+
+<p>4.7.4 우아한 커넥션 끊기</p>
+
+<ul>
+  <li>일반적으로는 자신의 출력 채널을 먼저 끊고 (절반 끊기) 다른 쪽에 있는 기기의 출력 채널이 끊기는 것을 기다리는 것</li>
+</ul>
+
+<h2 id="2부---http-아키텍처">2부 - HTTP 아키텍처</h2>
+
+<h3 id="5-웹-서버">5. 웹 서버</h3>
+
+<p>웹 서버</p>
+<ul>
+  <li>HTTP 요청을 처리하고 클라이언트에게 응답을 돌려주는 것을 의미한다.</li>
+</ul>
+
+<p>IETF ident 프로토콜 <sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup></p>
+<ul>
+  <li>클라이언트의 식별자를 얻기 위한 프로토콜이다. 클라이언트가 이 프로토콜을 지원한다면 서버와 클라이언트가 HTTP 커넥션을 맺을 시 <strong>클라이언트 측에서 113번 포트를 열고</strong> 서버가 요청 시 이 클라이언트의 사용자에 대한 식별자를 리턴하게 된다.
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBpIGFzIElkZW50KDExMylcbnBhcnRpY2lwYW50IGMgYXMgQ2xpZW50KDQyMzYpXG5wYXJ0aWNpcGFudCBzIGFzIFNlcnZlcig4MClcbiUlLVxuYy0-PnM6IEhUVFAg7Luk64Sl7IWYIOunuuydjFxucy0-Pmk6IGlkZW50IOy7pOuEpeyFmOydhCDrp7rsnYxcbnMtPj5pOiBJUCwgUE9SVOuhnCDsi53rs4TsnpAg7KCV67O0IOyalOyyrVxuaS0-PnM6IGlkZW50IOygleuztCDsnZHri7UgLSAgNDIzNiw4MDpVTlNFUklEOlVOSVg6bWFyeSIsIm1lcm1haWQiOm51bGx9">
+</li>
+</ul>
+
+<h3 id="6-프락시">6. 프락시</h3>
+
+<p>프락시는 요청을 가로채는 중개인으로써 <strong>보안, 캐시, 성능 개선</strong> 등 다양한 용도로 활용된다.</p>
+
+<p>프락시와 게이트웨이의 차이</p>
+<ul>
+  <li>프락시는 클라이언트와 서버가 동일한 프로토콜을 사용한다.</li>
+</ul>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBjIGFzIENsaWVudChIVFRQKVxucGFydGljaXBhbnQgcCBhcyBQcm94eShIVFRQKVxucGFydGljaXBhbnQgcyBhcyBTZXJ2ZXIoSFRUUClcbiUlLVxuYy0-PnA6IEhUVFBcbnAtPj5zOiBIVFRQXG5zLT4-cDogSFRUUFxucC0-PmM6IEhUVFAiLCJtZXJtYWlkIjpudWxsfQ"></p>
+<ul>
+  <li>게이트웨이는 보통 <strong>다른 프로토콜을 변환</strong>하기 위해 사용한다.</li>
+</ul>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBjIGFzIENsaWVudChIVFRQKVxucGFydGljaXBhbnQgZyBhcyBHYXRlV2F5KEhUVFAvRlRQIOqyjOydtO2KuOybqOydtClcbnBhcnRpY2lwYW50IHMgYXMgU2VydmVyKEZUUClcbiUlLVxuYy0-Pmc6IEhUVFBcbmctPj5zOiBGVFBcbnMtPj5nOiBGVFBcbmctPj5jOiBIVFRQIiwibWVybWFpZCI6bnVsbH0"></p>
+
+<p><code class="language-plaintext highlighter-rouge">Via</code> 헤더와 <code class="language-plaintext highlighter-rouge">Server</code> 헤더</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">Via</code> 헤더는 어떤 경유지들을 지나가는지 나타내는 정보이다. 쉼표로 구분되어 나타난다.
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>Via: 1.1 proxy1.com, 1.1 proxy2.com
+</code></pre></div>    </div>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Server</code>헤더는 원 서버가 사용하는 소프트웨어를 알려준다. 프록시는 이 값을 수정해서는 안된다.
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>Server: Apache/1.3.14 (Unix) PHP/4.0.4
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>TRACE 메서드</p>
+<blockquote>
+  <p>HTTP/1.1의 TRACE 메서드는 요청 메시지를 프락시의 연쇄를 따라가면서 어떤 프락시를 지나가고 어떻게 각 프락시가 요청 메시지를 수정하는지 관찰/추적할 수 있도록 해준다. TRACE는 프락시 흐름을 <strong>디버깅</strong>하는데 매우 유용하다.</p>
+</blockquote>
+
+<ul>
+  <li>TRACE가 무한으로 빠지는 것을 방지하기 위해 <code class="language-plaintext highlighter-rouge">Max-Forwards</code> 헤더를 사용해 거쳐갈 프락시 개수를 제한할 수 있다. 이 값은 다음 프락시로 넘어갈때 마다 한개씩 감소한다.</li>
+</ul>
+
+<p>OPTIONS 메서드</p>
+
+<ul>
+  <li>웹 서버나 웹 서버의 특정 리소스가 어떤 기능을 지원하는지 볼 수 있다. 경로 지정시에는 해당 경로에 대한 기능을 볼 수 있고, 별표(<code class="language-plaintext highlighter-rouge">*</code>) 지정시 모두 확인이 가능하다.</li>
+</ul>
+
+<h3 id="7-캐시">7. 캐시</h3>
+
+<p><strong>웹 캐시</strong>는 자주 쓰이는 문서의 사본을 자동으로 저장하는 HTTP 장치다. 원 서버의 요청을 줄이고 네트워크 비용, 병목을 줄여준다.</p>
+
+<p>신선도 검사 (HTTP 재검사)</p>
+<ul>
+  <li>가지고 있는 캐시 데이터가 원 서버의 데이터와 일치하는지 확인하는 과정이다. 주로 <code class="language-plaintext highlighter-rouge">If-Not-Modified</code> 헤더를 많이 사용한다.
+  <img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4lJS1cbnBhcnRpY2lwYW50IGMgYXMgY2xpZW50XG5wYXJ0aWNpcGFudCBjYWNoZSBhcyBjYWNoZVxucGFydGljaXBhbnQgcyBhcyBzZXJ2ZXJcbiUlLVxuYy0-PmNhY2hlOiDrrLjshJwg7JqU7LKtXG5jYWNoZS0-PnM6IOusuOyEnOqwgCDstZzsi6DsnbjqsIA_IChJZi1Ob3QtTW9kaWZpZWQg7Zek642U7JmAIO2VqOq7mCDsmpTssq0pXG5zLT4-Y2FjaGU6ICjstZzsi6ApIDMwNCBOb3QgTW9kaWZpZWQg7J2R64u1XG5zLT4-Y2FjaGU6ICjsgq3soJzsi5wpIDQwNCBOb3QgRm91bmQg7J2R64u1XG5zLT4-Y2FjaGU6ICjrs4Dqsr3si5wpIDIwMCBPSyDsnZHri7Vcbk5vdGUgcmlnaHQgb2YgY2FjaGU6ICjrs4Dqsr3si5wpIOuzgOqyveuQnCDsgqzrs7gg7KCA7J6lXG5jYWNoZS0-PmM6IOusuOyEnCDsnZHri7UiLCJtZXJtYWlkIjpudWxsfQ">
+</li>
+</ul>
+
+<h2 id="각주">각주</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>p31 이렇게 모든 형태를 가지는 URL은 잘 없다. 가장 중요한건 스킴, 호스트, 경로이다. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>p51 줄바꿈 문자열은 'CRLF'라고 쓴다. (<code class="language-plaintext highlighter-rouge">\r\n</code>) <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>p97 크기가 작은 HTTP 메시지는 패킷을 채우지 못함 / 확인응답 지연과 함께 쓰일 경우, 확인 응답이 도착할 때까지 데이터를 전송을 멈춘다. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>p101 병렬, 지속, 파이프라인, 다중 등 뒤에 더 자세히 다룬다. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p><a href="https://www.ietf.org/rfc/rfc1413.txt">https://www.ietf.org/rfc/rfc1413.txt</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+    </article>
+
+
+    
+<div class="giscus"></div>
+<div class="post-comments">
+  <script src="https://giscus.app/client.js" data-repo="jxmen/jxmen.github.io" data-repo-id="R_kgDOLKyoHA" data-category="Comments" data-category-id="DIC_kwDOLKyoHM4CdGSe" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="noborder_light" data-lang="ko" crossorigin="anonymous" async></script>
+</div>
+
+
+
+
+</div>
+<script async src="/js/create-link.js"></script>
+
+
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>
+
+
+<script async src="/js/parent.js"></script>
+<script async src="/js/toc-highlight.js"></script>
+
+            </div>
+        </div>
+        <footer class="footer">
+    <div>
+
+    </div>
+
+</footer>
+    
+</body>
+</html>
